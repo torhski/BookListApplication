@@ -71,6 +71,7 @@ public abstract class BaseFragment extends Fragment {
     public String getName() {
         return "";
     }
+
     public Context getContext() {
         return mContext;
     }

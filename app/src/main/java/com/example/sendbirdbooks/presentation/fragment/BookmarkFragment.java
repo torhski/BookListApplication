@@ -57,7 +57,7 @@ public class BookmarkFragment extends BaseEditableListFragment {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == CodeConst.DETAIL_REQUEST_CODE
-            && resultCode == RESULT_OK && data != null) {
+                && resultCode == RESULT_OK && data != null) {
             String id = data.getStringExtra(Const.FIELD_IBSN_13);
             boolean bookmarked = data.getBooleanExtra(Const.BOOKMARK_STATUS, false);
             // 상세화면에서 지워졌다.

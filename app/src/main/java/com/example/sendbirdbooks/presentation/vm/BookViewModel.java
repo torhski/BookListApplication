@@ -16,7 +16,10 @@ public class BookViewModel extends BaseViewModel {
     public LiveData<BookData> getBook() {
         return mBook;
     }
-    public LiveData<Boolean> isBookmark() { return isBookmark;}
+
+    public LiveData<Boolean> isBookmark() {
+        return isBookmark;
+    }
 
     private BookRepository repository = new BookRepository(BookLocalSource.getInstance(), BookRemoteSource.getInstance());
 

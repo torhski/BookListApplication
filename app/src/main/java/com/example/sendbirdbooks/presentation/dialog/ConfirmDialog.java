@@ -1,12 +1,7 @@
 package com.example.sendbirdbooks.presentation.dialog;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.widget.EditText;
-import android.widget.TextView;
-
-import com.example.sendbirdbooks.util.ToastUtil;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

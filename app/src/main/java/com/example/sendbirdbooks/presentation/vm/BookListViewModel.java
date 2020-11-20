@@ -24,12 +24,16 @@ import io.reactivex.schedulers.Schedulers;
 public class BookListViewModel extends BaseViewModel {
 
     private MutableLiveData<ArrayList<BookData>> mBookList = new MutableLiveData(new ArrayList<>());
+
     public LiveData<ArrayList<BookData>> getData() {
         return mBookList;
     }
 
     private MutableLiveData<HashSet<String>> removeSet = new MutableLiveData(new HashSet<String>());
-    public LiveData<HashSet<String>> getRemoveSet() { return removeSet; }
+
+    public LiveData<HashSet<String>> getRemoveSet() {
+        return removeSet;
+    }
 
     private BookRepository repository = new BookRepository(BookLocalSource.getInstance(), BookRemoteSource.getInstance());
 
@@ -91,6 +95,7 @@ public class BookListViewModel extends BaseViewModel {
     /**
      * only called when updated list after removed bookmark in detail activity
      * 상세페이지에서 북마크 삭제됨
+     *
      * @param id
      */
     public void updateBookmarkList(String id) {
@@ -101,6 +106,7 @@ public class BookListViewModel extends BaseViewModel {
 
     /**
      * LivedData 내 id 목록 지우기
+     *
      * @param ids
      */
     private void deleteLiveDataBooks(ArrayList<String> ids) {
@@ -119,6 +125,7 @@ public class BookListViewModel extends BaseViewModel {
 
     /**
      * 해당 isbn13 data를 앞으로 보내기.. 히스토리용
+     *
      * @param id
      */
     public void updateLiveDataBooks(String id) {

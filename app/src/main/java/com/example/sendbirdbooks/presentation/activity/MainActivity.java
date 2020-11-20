@@ -6,7 +6,6 @@ import android.view.View;
 
 import com.example.sendbirdbooks.R;
 import com.example.sendbirdbooks.presentation.base.BaseActivity;
-import com.example.sendbirdbooks.util.LogUtil;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -50,9 +49,9 @@ public class MainActivity extends BaseActivity {
 
         if (requestCode == CodeConst.DETAIL_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
             Fragment navHostFragment = getSupportFragmentManager().getFragments().get(0);
-            if(navHostFragment != null) {
+            if (navHostFragment != null) {
                 List<Fragment> fragments = navHostFragment.getChildFragmentManager().getFragments();
-                for(int i=0; i< fragments.size(); i++) {
+                for (int i = 0; i < fragments.size(); i++) {
                     Fragment fragment = fragments.get(i);
                     fragment.onActivityResult(requestCode, resultCode, data);
                 }

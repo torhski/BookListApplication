@@ -12,7 +12,7 @@ public class EbookEntity {
     }
 
     public Pdf mapToData() {
-        Pdf pdf  = new Pdf();
+        Pdf pdf = new Pdf();
         pdf.pdf = ebook;
         return pdf;
     }

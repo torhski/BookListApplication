@@ -41,7 +41,9 @@ public class BookLocalSource {
     }
 
     // check bookmark
-    public boolean checkBookmark(String id) { return RealmManager.checkBookmark(id); }
+    public boolean checkBookmark(String id) {
+        return RealmManager.checkBookmark(id);
+    }
 
     // load list
     public ArrayList<BookDataEntity> loadBookList(String type, int page, String sortField) {

@@ -111,7 +111,7 @@ public class RealmManager {
         Sort order = StringUtil.equals(sortField, Const.FIELD_TITLE) ? Sort.ASCENDING : Sort.DESCENDING;
         RealmResults<HistoryRealm> history =
                 realm.where(HistoryRealm.class)
-                        .sort(sortField != null ? sortField :  Const.FIELD_UPDATED_AT, order)
+                        .sort(sortField != null ? sortField : Const.FIELD_UPDATED_AT, order)
                         .limit(page * 10).findAll();
 
         List<HistoryRealm> res = realm.copyFromRealm(history.subList(10 * (page - 1), history.size()));
@@ -130,7 +130,7 @@ public class RealmManager {
         Sort order = StringUtil.equals(sortField, Const.FIELD_TITLE) ? Sort.ASCENDING : Sort.DESCENDING;
         RealmResults<BookRealm> history =
                 realm.where(BookRealm.class)
-                        .sort(sortField != null ? sortField :  Const.FIELD_UPDATED_AT, order)
+                        .sort(sortField != null ? sortField : Const.FIELD_UPDATED_AT, order)
                         .limit(page * 10).findAll();
 
         List<BookRealm> res = realm.copyFromRealm(history.subList(10 * (page - 1), history.size()));
@@ -182,7 +182,7 @@ public class RealmManager {
                 .findAll();
 
         List<Memo> res = new ArrayList<>();
-        for(int i=0; i<list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             res.add(Mapper.realmToMemo(list.get(i)));
         }
 

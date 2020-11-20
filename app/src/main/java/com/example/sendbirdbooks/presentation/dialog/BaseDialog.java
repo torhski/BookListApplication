@@ -28,6 +28,7 @@ public class BaseDialog extends Dialog {
     public void setOnOkListener(INextListener clickListener) {
         mOkListener = clickListener;
     }
+
     public void setOnCancelListener(INextListener clickListener) {
         mCancelListener = clickListener;
     }

@@ -14,7 +14,9 @@ public class MemoViewmodel extends BaseViewModel {
     private MutableLiveData<List<Memo>> mList = new MutableLiveData<List<Memo>>();
     private String isbn13;
 
-    public LiveData<List<Memo>> getList() { return mList; }
+    public LiveData<List<Memo>> getList() {
+        return mList;
+    }
 
     private MemoRepository repository = new MemoRepository(MemoLocalSource.getInstance());
 
