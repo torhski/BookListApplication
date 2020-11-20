@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.sendbirdbooks.presentation.fragment.HomeFragment"
+        android:label="New"
+        tools:layout="@layout/fragment_listview" >
+        <action
+            android:id="@+id/action_navigation_home_to_nav_detail"
+            app:destination="@id/nav_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.sendbirdbooks.presentation.fragment.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_listview"
+        >
+        <action
+            android:id="@+id/action_navigation_history_to_nav_detail"
+            app:destination="@id/nav_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_bookmark"
+        android:name="com.example.sendbirdbooks.presentation.fragment.BookmarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/fragment_listview" >
+        <action
+            android:id="@+id/action_navigation_bookmark_to_nav_detail"
+            app:destination="@id/nav_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.example.sendbirdbooks.presentation.fragment.DetailBookFragment"
+        tools:layout="@layout/detail_book_fragment">
+    </fragment>
+</navigation>
