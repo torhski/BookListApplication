@@ -15,7 +15,6 @@ import com.example.sendbirdbooks.presentation.view.BookDetailInfo;
 import com.example.sendbirdbooks.presentation.view.BookSummary;
 import com.example.sendbirdbooks.presentation.vm.BookViewModel;
 import com.example.sendbirdbooks.presentation.vm.MemoViewmodel;
-import com.example.sendbirdbooks.util.LogUtil;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.Nullable;
@@ -88,7 +87,6 @@ public class DetailActivity extends BaseActivity {
         });
 
         mMemoViewModel.getList().observe(this, list -> {
-            LogUtil.d("count: " + list.size());
             mMemoAdapter.setItem(list);
         });
     }
@@ -107,7 +105,7 @@ public class DetailActivity extends BaseActivity {
 
     @Override
     public void finish() {
-        Intent i  = new Intent();
+        Intent i = new Intent();
         i.putExtra(Const.FIELD_IBSN_13, mIsbn13);
         i.putExtra(Const.BOOKMARK_STATUS, mViewModel.isBookmark().getValue());
         setResult(RESULT_OK, i);
